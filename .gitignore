@@ -1,0 +1,4 @@
+config.py
+*.pyc
+*.pid
+__pycache__

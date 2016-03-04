@@ -1,0 +1,20 @@
+<html>
+<head>
+<title>Unrar utility</title>
+</head>
+<body>
+<h1>Unrar utility</h1>
+{% for id, file in rars %}
+{% set path, fn = file %}
+<form action="/unrar" method="POST">
+  <input type="hidden" name="id" value="{{ id }}">
+  <input type="submit" value="Unrar">
+  <span>
+    {{ fn }}
+  </span>
+</form>
+{% else %}
+No rars in selected path
+{% endfor %}
+</body>
+</html>
